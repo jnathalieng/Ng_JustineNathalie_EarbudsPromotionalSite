@@ -3,7 +3,7 @@ Lumi Buds – Wireless Earbuds
 Welcome to my Lumi Buds Promotional Website repository!
 This project showcases my concept design for a new pair of wireless earbuds and charging case, It features my 3D model built in Cinema 4D, integrated as an interactive AR object, alongside responsive web design, animations, and product showcases.
 
-Table of Contents 📋<br/>
+Table of Contents <br/>
 
 About
 <br/>
