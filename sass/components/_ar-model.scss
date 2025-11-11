@@ -1,0 +1,115 @@
+model-viewer {
+  width: auto;
+  max-width: 1200px;
+  height: 700px;
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+
+.Hotspot {
+  background: url(../images/hotspot.svg) center no-repeat;
+  position: relative;
+  border: 0;
+  cursor: pointer;
+  width: 45px;
+  height: 39px;
+  transition: all 1s ease-in-out;
+}
+
+.Hotspot:not([data-visible]) {
+opacity: 0;
+    width: 45px;
+    height: 38px;
+    pointer-events: none;
+}
+
+.Hotspot:focus {
+  border: 4px solid rgb(0, 128, 200);
+  height: 32px;
+  outline: none;
+  width: 32px;
+}
+
+.Hotspot:hover .HotspotAnnotation {
+  opacity: 1;
+  visibility: visible;
+}
+
+.HotspotAnnotation {
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  color: rgba(0, 0, 0, 0.8);
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 1em);
+  transform: translateY(-50%);
+  /* make the box bigger */
+  max-width: 280px; // was 200px
+  width: max-content;
+  padding: 0.75em 1em;
+  text-align: left;
+  pointer-events: none;
+  display: block;
+}
+
+.HotspotAnnotation img {
+  display: block;
+  max-width: 120px;  
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+}
+
+.HotspotAnnotation h2 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.HotspotAnnotation p {
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+
+@media screen and (max-width: 600px) {
+  .HotspotAnnotation {
+    position: static;          
+    display: block;
+    max-width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+  }
+
+  .HotspotAnnotation h2 {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+
+  .HotspotAnnotation p {
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  .HotspotAnnotation img {
+    display: block;
+    max-width: 100px;
+    margin-bottom: 6px;
+  }
+}
+
+
+  /* Progress */
+  // Customize the progress bar
+  //The ::part CSS pseudo-element represents any element within a shadow tree that has a matching part attribute.
+  model-viewer::part(default-progress-bar) {
+    height: 30px;
+    background-color: #E89B36;
+  }
+  
+  model-viewer::part(default-progress-mask) {
+    display: none;
+  }
