@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Lumi EarBuds</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/grid.css" rel="stylesheet">
+  </head>
+  <body>
+    <model-viewer id="model" src="model/Lumibuds_Right.gltf" camera-controls poster="images/poster.webp" shadow-intensity="1" environment-image="images/aircraft_workshop_01_1k.hdr" exposure="1.7" camera-orbit="52.34deg 88.29deg 874.8m" field-of-view="30deg">
+
+    <button class="Hotspot" slot="hotspot-1" data-surface="5 0 406 1182 1181 0.135 0.255 0.610" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation" id="hotspot-1"></div>
+    </button>
+      
+    <button class="Hotspot" slot="hotspot-2" data-surface="9 0 1202 1201 1200 0.073 0.539 0.388" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation" id="hotspot-2"></div>
+    </button>
+
+    <button class="Hotspot" slot="hotspot-3" data-surface="4 0 390 389 388 0.539 0.402 0.059" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation" id="hotspot-3"></div>
+    </button>
+
+    <button class="Hotspot" slot="hotspot-4" data-surface="13 0 431 1221 1220 0.072 0.855 0.073" data-visibility-attribute="visible">
+        <div class="HotspotAnnotation" id="hotspot-4"></div>
+    </button>
+    
+    </model-viewer>  
+    <!-- link to greensock main library -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <!-- Loads <model-viewer> for browsers: -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+    <!-- Our JS folder last -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
