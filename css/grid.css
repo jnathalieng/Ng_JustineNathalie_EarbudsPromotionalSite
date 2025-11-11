@@ -1,0 +1,133 @@
+/*
+Style Name: Site Build 
+Description: Lumi Buds
+Author: Justine Nathalie Ng
+Version: 1.0
+Tags: Let's Build Something!
+*/
+
+/* ___________________________________________
+
+       CSS Guide
+___________________________________________ */
+
+/* 01. CSS Grid
+   01-a. CSS Variables
+   01-b. Mobile
+   01-c. Mobile Landscape
+   01-d. Tablet
+   01-e. Small Desktop & Up
+
+/* _____________________________________
+
+   01-a. Variables
+   _____________________________________ */
+
+   :root {
+      --main-padding:0.9375em;
+      --gap-size:.5em;
+      --ml-gap-size:1em;
+    }
+
+/* _____________________________________
+
+   01-b. Mobile
+   _____________________________________ */
+
+   html {box-sizing: border-box}
+   *, *::before, *::after {box-sizing: inherit;}
+
+   /*------------ Grid mobile ------------*/
+   
+   .site { max-width: 48em; }
+
+   .mobile { display: block; }
+   .tablet { display: none; }
+   .desktop { display: none; }
+
+   /*------------ Grid Items mobile ------------*/
+
+   .head, .main > *, .foot{
+      display: grid;
+      grid-template-columns: 1fr repeat(2, minmax(0, 24em)) 1fr; 
+      margin-left: var(--gap-size);
+      margin-right: var(--gap-size);
+   }
+
+   .logo { grid-column: 2 / span 1;}
+   nav { grid-column: 3 / span 1;}
+
+
+   .one-item, .two-items, .three-items, .four-items {
+      display: grid; 
+      justify-items: stretch;
+      grid-column-gap: var(--gap-size);
+      grid-column: 2 / span 2; 
+   }
+
+   .full { grid-column: 1 / -1;}
+
+   .one-item { grid-template-columns: 1fr;}
+   .two-items { grid-template-columns: repeat(2, 1fr);}
+   .three-items { grid-template-columns: repeat(3, 1fr);}
+   .four-items {grid-template-columns: repeat(4, 1fr);}   
+
+   /* _____________________________________
+
+   01-c. Mobile Landscape
+   _____________________________________ */
+
+   @media screen and (min-width: 48em) {
+      .site { max-width: 63.99em;}
+
+      .mobile { display: block; }
+      .tablet { display: none; }
+      .desktop { display: none; }
+
+      .head, .main > *, .foot{
+         display: grid;
+         grid-template-columns: 1fr repeat(4, minmax(auto, 15.99em)) 1fr;
+      }
+
+      .logo {grid-column: 1 / span 1;}
+      .nav { grid-column: 2 / span 5;}
+
+      .sm-one-item, 
+      .sm-two-items, 
+      .sm-three-items, 
+      .sm-four-items 
+      .sm-one-third,
+      .sm-two-third,
+      .sm-half-right,
+      .sm-half-left {
+      display: grid; 
+      justify-items: stretch;
+      grid-column-gap: var(--gap-size);
+      grid-column: 2 / span 4; 
+   }
+
+    .sm-one-item { grid-template-columns: 1fr;}
+    .sm-two-items { grid-template-columns: repeat(2, 1fr);}
+    .sm-three-items { grid-template-columns: repeat(3, 1fr);}
+    .sm-four-items {grid-template-columns: repeat(4, 1fr);}  
+    .sm-one-third { grid-template-columns: 1fr 3fr;}
+    .sm-two-third { grid-template-columns: 3fr 1fr;}
+    .sm-half-left { grid-template-columns: 2fr 1fr 1fr;}
+    .sm-half-right { grid-template-columns: 1fr 1fr 2fr;}      
+   }
+   
+
+   
+   /* _____________________________________
+
+   01-d. Tablet
+   _____________________________________ */
+
+
+   /* _____________________________________
+
+   01-e. Small Desktop & Up
+   _____________________________________ */
+/* url(https://placehold.co/600x400.png) */ 
+
+   /* _____________________________________
