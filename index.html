@@ -4,11 +4,65 @@
     <title>Lumi EarBuds</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/grid.css" rel="stylesheet">
   </head>
+  
   <body>
-    <model-viewer id="model" src="model/Lumibuds_Right.gltf" camera-controls poster="images/poster.webp" shadow-intensity="1" environment-image="images/aircraft_workshop_01_1k.hdr" exposure="1.7" camera-orbit="52.34deg 88.29deg 874.8m" field-of-view="30deg">
+
+    <!-- HEADER / NAV -->
+    <div class="grid-con">
+  <header class="col-span-full" id="main-header">
+      
+    <div class="logo-box">
+      <img src="images/LumiBuds_Logo.png" alt="Lumi Buds Logo" id="lumi-logo">
+      <h1>LUMI BUDS</h1>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#ar-model">AR Model</a></li>
+        <li><a href="#inside-look">Inside-Look</a></li>
+        <li><a href="#video">Video</a></li>
+      </ul>
+    </nav>
+
+  </header>
+</div>
+
+    <!-- MAIN CONTENT -->
+    <div class="grid-con">
+      <section class="col-span-full" id="about">
+        <h1>LUMI BUDS — PRISM DREAMZ COLLECTION</h1>
+        <p>Where sound meets sparkle.</p>
+
+        <p>
+          Housed in a luminous pastel box that opens like a treasure chest, Lumi Buds feature a radiant gem-cut exterior, floral accent detail, and a soft reflective finish that catches the light with every movement. Sleek metallic charging nodes ensure a fast, secure charge, while the comfort-fit silicone tips make every listening moment feel airy and effortless.
+        </p>
+
+        <p>
+          Choose from three enchanting colors—Silver Glow, Golden Hour, and Blush Prism—each crafted to match your personal sparkle. Whether you're vibing to your playlist, unwinding before bed, or taking a dreamy walk, Lumi Buds bring the perfect mix of elegance and immersive sound.
+        </p>
+        
+        <p>
+          Glow like a gem. <br>
+          Sound like a dream. <br>
+          With Prism Dreamz, every moment feels a little more magical.
+        </p>
+      </section>
+
+      <!-- AR MODEL -->
+      <section class="col-span-full" id="ar-model">
+        <h2>AR Model</h2>
+        <h3>See the sparkle come to life.</h3>
+
+        <p>
+          Experience Lumi Buds in a whole new dimension with the Prism Dreamz AR Model. Rotate it, zoom in, and explore every gem-cut facet up close as the earbuds glimmer in real time. Watch the metallic sheen shift with your lighting, see the floral detailing sparkle, and get a true feel for the dreamy pastel finish before it even reaches your hands.
+        </p>
+
+        <model-viewer id="model" src="model/Lumibuds_Right.gltf" camera-controls poster="images/poster.webp" shadow-intensity="1" environment-image="images/aircraft_workshop_01_1k.hdr" exposure="1.7" camera-orbit="52.34deg 88.29deg 874.8m" field-of-view="30deg">
 
     <button class="Hotspot" slot="hotspot-1" data-surface="5 0 406 1182 1181 0.135 0.255 0.610" data-visibility-attribute="visible">
         <div class="HotspotAnnotation" id="hotspot-1"></div>
@@ -25,13 +79,101 @@
     <button class="Hotspot" slot="hotspot-4" data-surface="13 0 431 1221 1220 0.072 0.855 0.073" data-visibility-attribute="visible">
         <div class="HotspotAnnotation" id="hotspot-4"></div>
     </button>
-    
-    </model-viewer>  
-    <!-- link to greensock main library -->
+    </model-viewer>
+
+
+        <section id="mobile-content" class="grid-con">
+          <h2 class="col-span-full">Lumi Buds Features</h2>
+
+  <div id="hotspot-mobile-1" class="col-span-full"></div>
+  <div id="hotspot-mobile-2" class="col-span-full"></div>
+  <div id="hotspot-mobile-3" class="col-span-full"></div>
+  <div id="hotspot-mobile-4" class="col-span-full"></div>
+
+</section>
+
+        <div id="box3" class="box green"></div>
+
+        <p>
+          The AR Model lets you: <br>
+          View the earbuds in full 360° <br>
+          See the gem-cut details and metallic textures react to real light <br>
+        </p>
+        
+        <p>
+          Designed to reflect the magical world of the Prism Dreamz collection, the AR experience makes Lumi Buds feel like a real piece of jewelry—floating right in front of you.
+        </p>
+
+        <p>
+          Bring the sparkle to life. <br>
+          See Lumi Buds exactly as they shimmer in reality.
+        </p>
+
+      </section>
+
+      <!-- INSIDE LOOK / XRAY -->
+      <section class="col-span-full" id="inside-look">
+        <h2>Inside-Look</h2>
+        <h3>Inside View</h3>
+
+        <p>See the magic behind the sparkle.</p>
+
+        <p>
+          Discover what makes Lumi Buds shine from the inside out. The Prism X-Ray View reveals the hidden components beneath the gem-cut exterior—showing the inner structure, metallic nodes, and precision-crafted chipset that power every dreamy sound.
+        </p>
+
+        <p>
+          With this see-through mode, you can explore the technology that creates the soft glow, the crystal clarity, and the iconic Prism Dreamz sparkle. It’s a transparent look into the beauty and engineering behind your earbuds.
+        </p>
+        
+        <div id="xray">
+          <div id="divisor"></div>
+          <input type="range" min="0" max="100" value="50" id="slider">
+        </div>
+      </section>
+
+      <!-- VIDEO / EXPLODE VIEW -->
+      <section class="col-span-full" id="video">
+        <h2>Video</h2>
+        <h3>A glimpse into the Lumi Buds universe.</h3>
+
+        <p>
+          Watch Lumi Buds come alive through a dreamy pastel animation that captures the essence of the Prism Dreamz collection. This short video showcases the gem-cut finish, soft sparkles, and signature Y2K glow, bringing out the personality and elegance of the earbuds in motion.
+        </p>
+        
+        <div class="col-span-full">
+          <canvas id="explode-view"></canvas>
+        </div>
+        
+        <div class="col-start-2 col-end-3">
+          <div class="content">
+            <p>
+              The animation highlights the metallic shine, floral accents, and smooth rotations—giving you a magical first look at Lumi Buds before you explore them in AR or X-Ray mode. It’s a soft, aesthetic preview of the world behind the sparkle.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!--Footer-->
+    <div class="grid-con">
+    <footer class="col-span-full" id="main-footer">
+      <p>Created by @JNDesigns2025 · Lumi Buds — Prism Dreamz Collection</p>
+    </footer>
+  </div>
+
+    <!-- SCRIPTS -->
+    <!-- GSAP main library -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-    <!-- Loads <model-viewer> for browsers: -->
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
-    <!-- Our JS folder last -->
+    <!-- GSAP ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/ScrollTrigger.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollToPlugin.min.js"></script>
+    <!-- <model-viewer> -->
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js">
+    </script>
+    <!-- Your JS -->
     <script src="js/main.js"></script>
   </body>
 </html>
