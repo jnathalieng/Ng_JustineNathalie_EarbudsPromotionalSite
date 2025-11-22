@@ -1,4 +1,12 @@
+
 //Mixins
+
+@mixin rotated($radius) {
+      -webkit-transform: rotate($radius);
+      -ms-transform: rotate($radius);
+       transform: rotate($radius);
+ }
+ 
 
 //flex box mixins
 
@@ -27,3 +35,18 @@
       display: flex;
       justify-content: center;
 }
+
+//fonts
+
+@mixin fontFace($font-family, $file-path) {
+      @font-face {
+          font: {
+              family: $font-family;
+              weight: normal;
+              style: normal;
+          }
+          //Modern Browsers
+          src: url('#{$file-path}.woff') format('woff'),
+          url('#{$file-path}.woff2') format('woff2')
+      }
+  }
