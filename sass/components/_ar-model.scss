@@ -113,3 +113,36 @@ opacity: 0;
   model-viewer::part(default-progress-mask) {
     display: none;
   }
+
+  //Mobile 
+
+#mobile-content {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .HotspotAnnotation {
+    display: none;
+  }
+
+  #mobile-content {
+    display: block;
+    margin-top: 20px;
+  }
+
+  #mobile-content .col-span-full {
+    margin-bottom: 20px;
+  }
+
+  #mobile-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 8px;
+  }
+
+  #mobile-content h2,
+  #mobile-content p {
+    text-align: center;
+  }
+}
